@@ -86,7 +86,7 @@ public:
 };
 
 int main() {
-    // Initialization
+
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Thomas Attractor - Real-time Simulation");
     SetTargetFPS(60);
 
@@ -115,7 +115,7 @@ int main() {
         "}";
    
     while (!WindowShouldClose()) {
-        // Update
+        
         if (autoRotate) {
             rotationAngle += 0.5f;
             camera.position.x = 20.0f * sinf(rotationAngle * DEG2RAD);
