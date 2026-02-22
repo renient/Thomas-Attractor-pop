@@ -15,7 +15,7 @@ struct AttractorParams {
     float a, b, c, d, e, f;
 };
 
-// --- Particle Structure ---
+
 struct Particle {
     Vector3 position;
     Color color;
@@ -66,7 +66,7 @@ public:
     }
 
     void Update() {
-        // Shift particles and add new one for "movement" effect
+        
         for (size_t i = 0; i < particles.size() - 1; i++) {
             particles[i].position = particles[i+1].position;
         }
@@ -101,7 +101,7 @@ int main() {
     bool autoRotate = true;
     float rotationAngle = 0.0f;
 
-    // Shader for Bloom (Simplified strings for embedded use)
+   
     const char* bloomFs = 
         "#version 330\n"
         "in vec2 fragTexCoord;"
@@ -112,11 +112,8 @@ int main() {
         "    vec4 texel = texture(texture0, fragTexCoord);"
         "    vec3 bloom = texel.rgb * 1.5;" // Simple boost for glow
         "    finalColor = vec4(texel.rgb + bloom * 0.5, texel.a);"
-        "}";
-
-    // In a real app, we'd load this from a file. 
-    // For this demo, we'll use standard rendering and explain the bloom.
-
+        "}";
+   
     while (!WindowShouldClose()) {
         // Update
         if (autoRotate) {
@@ -127,7 +124,7 @@ int main() {
         
         system.Update();
 
-        // Draw
+        
         BeginDrawing();
             ClearBackground(BLACK);
 
@@ -136,7 +133,7 @@ int main() {
                 DrawGrid(20, 1.0f);
             EndMode3D();
 
-            // UI Components
+           
             DrawRectangle(10, 10, 300, 250, Fade(DARKGRAY, 0.8f));
             DrawText("ATTRACTOR CONTROLS", 20, 20, 20, CYAN);
             DrawText("Type: Thomas", 20, 50, 15, WHITE);
