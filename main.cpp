@@ -5,12 +5,10 @@
 #include <cmath>
 #include <string>
 
-// --- Configuration & Constants ---
 const int MAX_PARTICLESCount = 50000;
 const int SCREEN_WIDTH = 1280;
 const int SCREEN_HEIGHT = 720;
 
-// --- Attractor Types ---
 enum AttractorType { THOMAS, LORENZ, AIZAWA, DEQUAN };
 
 struct AttractorParams {
