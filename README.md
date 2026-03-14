@@ -1,7 +1,7 @@
 # Thomas Attractor & Chaos Systems Simulation
 
 This repository contains C and C++ implementations of various Strange Attractors (Thomas, Lorenz, Aizawa), rendered both in the terminal (using ASCII/ANSI) and in a standalone window using OpenGL.
-# Made By Re
+# Made By CREA
 
 ## 📁 Project Structure
 
